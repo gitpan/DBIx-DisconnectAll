@@ -5,6 +5,7 @@ author:
 build_requires:
   ExtUtils::MakeMaker: 6.36
   Test::More: 0
+  Test::Requires: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.36
 distribution_type: module
@@ -20,7 +21,11 @@ no_index:
     - inc
     - t
     - xt
+requires:
+  DBD::SQLite: 1.33
+  DBI: 1.604
+  parent: 0
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/kazeburo/DBIx-DisconnectAll.git
-version: 0.01
+version: 0.02
