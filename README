@@ -1,27 +1,29 @@
-This is Perl module DBIx::DisconnectAll.
+NAME
+    DBIx::DisconnectAll - disconnect all databases
 
-INSTALLATION
+SYNOPSIS
+      use DBIx::DisconnectAll;
 
-DBIx::DisconnectAll installation is straightforward. If your CPAN shell is set up,
-you should just be able to do
+      dbi_disconnect_all();
 
-    % cpan DBIx::DisconnectAll
+DESCRIPTION
+    DBIx::DisconnectAll is utility module to disconnect all connected
+    databases
 
-Download it, unpack it, then build it as per the usual:
+    DBI has DBI->disconnect_all methods, but some DBD modules does not
+    support it, so DBI->disconnect_all is undocumented yet and unusable.
 
-    % perl Makefile.PL
-    % make && make test
+    DBIx::DisconnectAll realizes disconnect_all from DBI's public API.
 
-Then install it:
+AUTHOR
+    Masahiro Nagano <kazeburo AAJKLFJEF@ gmail.com>
 
-    % make install
+    Tokuhiro Matsuno
 
-DOCUMENTATION
+SEE ALSO
+    DBI
 
-DBIx::DisconnectAll documentation is available as in POD. So you can do:
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-    % perldoc DBIx::DisconnectAll
-
-to read the documentation online with your favorite pager.
-
-Masahiro Nagano

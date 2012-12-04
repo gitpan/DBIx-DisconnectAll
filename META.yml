@@ -1,16 +1,14 @@
 ---
 abstract: 'disconnect all databases'
 author:
-  - 'Masahiro Nagano <kazeburo {at} gmail.com>'
+  - 'Masahiro Nagano E<lt>kazeburo AAJKLFJEF@ gmail.comE<gt>'
 build_requires:
-  ExtUtils::MakeMaker: 6.36
-  Test::More: 0
+  Test::More: 0.98
   Test::Requires: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,11 +19,15 @@ no_index:
     - inc
     - t
     - xt
+provides:
+  DBIx::DisconnectAll:
+    file: lib/DBIx/DisconnectAll.pm
+    version: 0.03
 requires:
   DBD::SQLite: 1.33
   DBI: 1.604
   parent: 0
+  perl: 5.008005
 resources:
   license: http://dev.perl.org/licenses/
-  repository: git://github.com/kazeburo/DBIx-DisconnectAll.git
-version: 0.02
+version: 0.03
